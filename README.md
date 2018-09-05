@@ -29,6 +29,7 @@
 2. [Week 1 - 风险度量基础](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Lectures/Week%201%20-%20%E9%A3%8E%E9%99%A9%E5%BA%A6%E9%87%8F%E5%9F%BA%E7%A1%80.pptx)
 	- VaR（在险价值）
 	- TVaR（条件在险价值）/ CVaR（尾部在险价值）
+	- 保费原理
 
 
 ## R代码和练习
