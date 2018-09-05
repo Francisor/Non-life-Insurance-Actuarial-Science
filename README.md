@@ -5,7 +5,7 @@
 
 非寿险精算主要内容是**费率厘定**、**准备金评估**和**再保险**三部分
 
-- **损失模型**：索赔次数、索赔金额、累积损失模型
+- **损失模型**：风险度量、索赔次数、索赔金额、累积损失模型
 - **费率厘定**：分类费率厘定、经验费率厘定
 - **准备金评估**：未到期责任准备金、未决赔款准备金、理赔费用准备金评估
 - **再保险定价**
@@ -23,10 +23,12 @@
 
 ## 课程讲义
 1. [Week 1 - 非寿险精算简介]()
-2. [Week 1 - R 软件与精算]()
-	- rmardown
-	- latex
-	- 
+	- 课程安排
+	- R 软件介绍
+	- 非寿险概念
+2. [Week 1 - 风险度量基础]()
+	- VaR（在险价值）
+	- TVaR（条件在险价值）/ CVaR（尾部在险价值）
 
 
 ## R代码和练习
@@ -36,6 +38,7 @@
 
 
 ## 教材和参考资料
+- 孟生旺, 刘乐平. 非寿险精算学(第三版), 中国人民大学出版社, 2015
 - [Klugman S. A., Panjer H. H., Willmot G. E. Loss models: from data to decisions (4th edition).  London: John Wiley & Sons, 2012.]()
 - [Tse, Yiu-Kuen. Nonlife actuarial models: theory, methods and evaluation.  London: Cambridge University Press, 2009.]()
 
@@ -43,4 +46,4 @@
 
 
 
- ![](非寿险精算学.jpg)
+ ![](非寿险精算学.png)
