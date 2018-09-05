@@ -21,7 +21,10 @@
 - **保险学**：基本概念和专业术语
 
 
+
 ## 课程讲义
+- [Markdown 新手指南](https://www.jianshu.com/p/q81RER)
+- [Markdown 语法大全](https://www.appinn.com/markdown/)
 1. [Week 1 - 非寿险精算简介](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Lectures/Week%201%20-%20%E9%9D%9E%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97%E7%AE%80%E4%BB%8B.ppt)
 	- 课程安排
 	- R 软件介绍
