@@ -22,11 +22,11 @@
 
 
 ## 课程讲义
-1. [Week 1 - 非寿险精算简介]()
+1. [Week 1 - 非寿险精算简介](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Lectures/Week%201%20-%20%E9%9D%9E%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97%E7%AE%80%E4%BB%8B.ppt)
 	- 课程安排
 	- R 软件介绍
 	- 非寿险概念
-2. [Week 1 - 风险度量基础]()
+2. [Week 1 - 风险度量基础](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Lectures/Week%201%20-%20%E9%A3%8E%E9%99%A9%E5%BA%A6%E9%87%8F%E5%9F%BA%E7%A1%80.pptx)
 	- VaR（在险价值）
 	- TVaR（条件在险价值）/ CVaR（尾部在险价值）
 
@@ -39,8 +39,8 @@
 
 ## 教材和参考资料
 - 孟生旺, 刘乐平. 非寿险精算学(第三版), 中国人民大学出版社, 2015
-- [Klugman S. A., Panjer H. H., Willmot G. E. Loss models: from data to decisions (4th edition).  London: John Wiley & Sons, 2012.]()
-- [Tse, Yiu-Kuen. Nonlife actuarial models: theory, methods and evaluation.  London: Cambridge University Press, 2009.]()
+- [Klugman S. A., Panjer H. H., Willmot G. E. Loss models: from data to decisions (4th edition).  London: John Wiley & Sons, 2012.](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Reference%20books/Loss%20models%20from%20data%20to%20decisions%20(fourth%20editon)%20-%20Stuart%20A.%20Klugman%20(%E6%95%99%E5%AD%A6%E8%B5%84%E6%96%99).pdf)
+- [Tse, Yiu-Kuen. Nonlife actuarial models: theory, methods and evaluation.  London: Cambridge University Press, 2009.](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Reference%20books/Nonlife%20Actuarial%20Models%20Theory%20Methods%20and%20Evaluation%20(%E6%95%99%E5%AD%A6%E8%B5%84%E6%96%99).pdf)
 
 
 
