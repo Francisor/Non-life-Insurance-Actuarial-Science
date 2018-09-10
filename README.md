@@ -71,11 +71,6 @@
 - [ggplot2 - Elegant graphics for data analysis.](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Reference%20books/ggplot2%20guide.pdf)
 - [R in Action](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Reference%20books/R%20in%20Action-2010.pdf)
 
+---
 
  ![](非寿险精算学.png)
-
-
- ![](Loss models.png)
-
-
- ![](Nonlife actuarial models.png)
