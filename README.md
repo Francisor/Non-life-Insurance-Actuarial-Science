@@ -34,16 +34,16 @@
 	- TVaR（条件在险价值）/ CVaR（尾部在险价值）
 	- 保费原理
 - [Week 3 - 损失金额模型](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Lectures/Week%201%20-%20%E9%A3%8E%E9%99%A9%E5%BA%A6%E9%87%8F%E5%9F%BA%E7%A1%80.pptx)
- - 指数分布、伽马分布、逆高斯分布、对数正态分布、帕累托分布、威布儿分布
- - 对数变换、指数变换
- - 混合分布
- - 案例分析
+	- 指数分布、伽马分布、逆高斯分布、对数正态分布、帕累托分布、威布儿分布
+	- 对数变换、指数变换
+	- 混合分布
+	- 案例分析
 
 
 
 ## R 代码和练习
--  [Week 2 - 风险度量](https://github.com/lizhengxiao/Non-life-Insurance-Ratemaking/blob/master/Codes/1.%20%E9%A3%8E%E9%99%A9%E5%BA%A6%E9%87%8F.r)
--  [Week 3 - 损失金额模型]()
+-  [Week 2 - 风险度量](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Codes/1.%20Risk%20Measures.r)
+-  [Week 3 - 损失金额模型](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Codes/2.%20Models%20of%20Claim%20Amount.r)
 
 
 
