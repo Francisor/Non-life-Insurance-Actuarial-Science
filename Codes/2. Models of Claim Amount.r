@@ -19,9 +19,9 @@ legend('topright', legend = c('theta = 0.5', 'theta = 1', 'theta = 2'),
 par(mfrow = c(1, 2) )
 # 固定形状参数
 alpha <- 2                # 形状参数
-theta <- c(0.5, 1, 2)     # 尺度参数/比率参数
+theta <- c(0.5, 1, 2)     # 比率参数，尺度参数为 1/theta
 x0 <- seq(0.001, 15, length.out = 100)
-f1 <- dgamma(x0,  shape = alpha, rate = theta[1])
+f1 <- dgamma(x0,  shape = alpha, rate = theta[1]) # 
 f2 <- dgamma(x0,  shape = alpha, rate = theta[2])
 f3 <- dgamma(x0,  shape = alpha, rate = theta[3])
 matplot(x0, cbind(f1, f2, f3),ylim = c(0,0.8), main = '',  type = 'l', lty = 1:3, lwd = 2, ylab = '密度函数')
@@ -30,7 +30,7 @@ legend('topright', legend = c('alpha = 2, theta = 0.5',
                               'alpha = 2, theta = 2'),
        lty = c(1,2,3), bty = "n", lwd = 2,  col = 1:3)
 
-# 固定尺度参数
+# 固定比率参数
 alpha <- c(1,2,3)
 theta <- 0.5
 x0 <- seq(0.001, 15, length.out = 100)
