@@ -41,7 +41,8 @@
 
 
 
-## R 代码和练习
+## R 代码和数据
+- [freMTPLsev]()
 -  [Week 2 - 风险度量](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Codes/1.%20Risk%20Measures.r)
 -  [Week 3 - 损失金额模型](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Codes/2.%20Models%20of%20Claim%20Amount.r)
 
@@ -57,13 +58,19 @@
 	- 如果发生 10% 的通货膨胀，上述结果将如何变化？
 	- 如果通胀函数为1.1x^0.5，上述结果将如何变化？
 	
-**要求:用R编写程序代码。**
+
+2. 对于gamma分布（shape=2,scale=100) 绘图：
+	- 止损保费和平均超额损失随着免赔额增加而变化的曲线图
+	- 有限期望值随着限额变化而变化的曲线图
+	- 把上述分布改为 pareto(shape=2,scale=200) 和指数分布 (rate=1/200)。
+
+**注：上述三个分布的均值相等，均为200**
+
+**要求:用 R 编写程序代码。**
 
 
 
-
-
-
+---
 ## 教材和参考资料
 - 孟生旺, 刘乐平. 非寿险精算学(第三版), 中国人民大学出版社, 2015
 - [Klugman S. A., Panjer H. H., Willmot G. E. Loss models: from data to decisions (4th edition).  London: John Wiley & Sons, 2012.](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Reference%20books/Loss%20models%20from%20data%20to%20decisions%20(fourth%20editon)%20-%20Stuart%20A.%20Klugman%20(%E6%95%99%E5%AD%A6%E8%B5%84%E6%96%99).pdf)

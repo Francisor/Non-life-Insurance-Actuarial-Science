@@ -199,40 +199,40 @@ legend('topright', legend = c('alpha = 1, theta = 0.5',
                               'alpha = 3, theta = 0.5'),
        lty = c(1,2,3), bty = "n", col = 1:3)
 
-
+# theta = 3.6
+par(mfrow = c(1, 1))
+x0 <- seq(0.001, 5, length.out = 100)
+f0 <- dwei(x0,  alpha = 0.1, theta = 3.6)
+plot(x0, f0, type = 'l', col = 2, lwd = 3)
+legend('topright', legend = c('alpha = 0.1, theta = 3.6'), 
+       lwd = 3, bty = "n", col = 2)
 # -----------------------------------------------------------------------------------
 # 假设X服从参数为 (3,  4) 的伽马分布, 求g(X)的分布。
 # -----------------------------------------------------------------------------------
-### 伽马分布的密度函数
+# 伽马分布的密度函数
+par(mfrow = c(1, 1))
 f = function(x)  dgamma(x,  3,  4)
-### 尺度变换,   Y = 2X
-f1 = function(x)  f(x/2)/2
-### 幂变换,  Y = X ^ (1/2)
-f2 = function(x)  f(x^2) * 2 * x
-### 逆变换,  Y = 1/X
-f3 = function(x)   f(1/x)/x^2
 ### 指数变换,  Y = exp(X)
-f4 = function(x)   f(log(x))/x
+f1 = function(x)   f(log(x))/x
 ### 对数变换,   Y = log(X)
-f5 = function(x)    f(exp(x)) * exp(x)
+f2 = function(x)    f(exp(x)) * exp(x)
 x <- seq(0, 4, 0.01)
-matplot(x, cbind(f(x), f1(x), f2(x), f3(x), f4(x), f5(x)), type='l', lty=1:5, lwd=2)
-legend('topright', c('X','2X','X^0.5','1/x','exp(X)','log(X)'), 
-       lty=1:5, col=1:5, lwd=2)
+matplot(x, cbind(f(x), f1(x), f2(x)), type='l', lty=1:3, lwd=2)
+legend('topright', c('X','exp(X)','log(X)'), lty=1:3, col=1:3, lwd=2)
 
 
 # -----------------------------------------------------------------------------------
-# 例： 两个对数正态分布的参数分别为(1, ????)和(????, ????), 如果按照30%和70%的比例把它们进行混合, 求混合分布的密度函数。
+# 例： 两个对数正态分布的参数分别为(1, 2)和(3, 4), 如果按照30%和70%的比例把它们进行混合, 求混合分布的密度函数。
 # -----------------------------------------------------------------------------------
 p = 0.3
 m1 = 1; s1 = 2
 m2 = 3; s2 = 4
 ## 混合对数正态分布的密度函数
 f = function(x)  p * dlnorm(x,  m1,  s1) + (1 - p) * dlnorm(x,  m2,  s2)
-curve(f,  xlim = c(0,  1),  ylim = c(0,  2),   lwd = 2,  col = 2)
+curve(f,  xlim = c(0,  1),  ylim = c(0,  2),   lwd = 2,  col = 2, main = '混合对数正态分布')
 curve(dlnorm(x,  m1,  s1),  lty = 2,  add = TRUE)
 curve(dlnorm(x,  m2,  s2),  lty = 3,  add = TRUE)
-legend("topright",  c("mixed lnorm",  "lnorm(1, 10)",  "lnorm(2, 20)"),  lty = c(1,  2,  3),  col = c(2,  1,  1),  lwd = c(2,  1,  1))
+legend("topright",  c("mixed lnorm",  "lnorm(1, 2)",  "lnorm(3, 4)"),  lty = c(1,  2,  3),  col = c(2,  1,  1),  lwd = c(2,  1,  1))
 
 
 # -----------------------------------------------------------------------------------
@@ -267,14 +267,6 @@ fit4 = fitdist(x, 'gamma', method = 'mge', gof = 'CvM')
 fit1  
 plot(fit1)
 
-#  运用 optim/optimize 函数对分布的参数进行估计
-lower = c(0, 100, 200, 500)    #损失下限
-upper = c(100, 200, 500, Inf)  #损失上限
-freq = c(15, 20, 10, 5)       #损失次数
-# 指数分布的极大似然估计
-f1 = function(a) {-sum(freq * log(pexp(upper, a) - pexp(lower, a)))}
-optimize(f1,  c(1/10000, 1/100))   #初始值根据矩估计值选定
-nlm(f1,  p = c(0.01, 0.01))   #初始值根据矩估计值选定
 # -----------------------------------------------------------------------------------
 # 案例分析
 # ------------------------------------------------------------------------------------------------
@@ -288,6 +280,7 @@ summary(x)
 quantile(x, 90:100/100)
 x <- x[x<=100000]
 hist(x, breaks = 100000, xlim = c(0, 10000))
+
 #------------把索赔金额x分段---------------
 c1 = 400; c2 = 1000; c3 = 1300; c4 = 5000
 index1 <- which(x<=c1)
@@ -301,9 +294,9 @@ fit2 = fitdist(x[index2], 'lnorm')
 fit3 = fitdist(x[index3], 'lnorm')
 fit4 = fitdist(x[index4], 'lnorm')
 ##右尾用帕累托分布拟合
-dpareto = function(x, alpha, theta=c4) alpha*theta^alpha/x^(alpha+1) 
-ppareto = function(x, alpha, theta=c4) 1-(theta/x)^alpha
-fit5=fitdist(x[index5], 'pareto', start = 5)  #帕累托从c3以后有定义
+dpareto = function(x, alpha, theta = c4) alpha*theta^alpha/x^(alpha+1) 
+ppareto = function(x, alpha, theta = c4) 1-(theta/x)^alpha
+fit5 = fitdist(x[index5], 'pareto', start = 5)  #帕累托从c3以后有定义
 
 hist(x[index5], freq = F)
 curve(dpareto(x, fit5$estimate[1]), add = T)
@@ -335,8 +328,25 @@ f = function(x) {
                               w5*dpareto(x, m5)))))
 }  
 
-hist(x, breaks=5000, xlim = c(0, 6000), prob=TRUE,  main = "",  xlab = "索赔额", col='grey')
-curve(f, xlim=c(0, 6000), add=T,  col=2,  lwd=2)
+hist(x, breaks = 5000, xlim = c(0, 6000), prob = TRUE,  main = "",  xlab = "索赔额", col='grey')
+curve(f, xlim = c(0, 6000), add = T,  col=2,  lwd = 2)
+
+# ==================================================
+# 指数分布和帕累托分布的平均超额函数
+# ==================================================
+# 指数分布的生存函数
+S <- function(x) exp(-2*x)
+
+# 指数分布的平均超额函数 ex1
+ex1 <- NULL
+d1 <- seq(0.1, 5, 0.1) # 免赔额
+for(i in 1:length(d1)){
+  ex1[i] <- integrate(S, d1[i], Inf)$value/S(d[i])
+}
+
+
+
+
 
 
 
