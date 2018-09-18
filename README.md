@@ -42,7 +42,7 @@
 
 
 ## R 代码和数据
-- [freMTPLsev]()
+- [freMTPLsev](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Datasets/freMTPLsev.csv)
 -  [Week 2 - 风险度量](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Codes/1.%20Risk%20Measures.r)
 -  [Week 3 - 损失金额模型](https://github.com/lizhengxiao/Non-life-Insurance-Actuarial-Science/blob/master/Codes/2.%20Models%20of%20Claim%20Amount.r)
 
@@ -58,8 +58,7 @@
 	- 如果发生 10% 的通货膨胀，上述结果将如何变化？
 	- 如果通胀函数为1.1x^0.5，上述结果将如何变化？
 	
-
-2. 对于gamma分布（shape=2,scale=100) 绘图：
+2. 对于 gamma 分布（shape=2,scale=100) 绘图：
 	- 止损保费和平均超额损失随着免赔额增加而变化的曲线图
 	- 有限期望值随着限额变化而变化的曲线图
 	- 把上述分布改为 pareto(shape=2,scale=200) 和指数分布 (rate=1/200)。
